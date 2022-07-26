@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/0x01/java_jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/0x02/java_jdbc_manipulation/pom.xml" />
       </list>
     </option>
   </component>
