@@ -71,6 +71,13 @@ public class ClienteDAOImpl implements ClienteDAO {
 
     @Override
     public void delete(String urlConexao, int id) {
-
+        try (Connection connection = DriverManager.getConnection(urlConexao);) {
+            PreparedStatement stmt = connection.prepareStatement("DELETE clientes\n" +
+                    "WHERE id = ?;");
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
